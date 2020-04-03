@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SEC-I4-dhy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Rrw-Bq-G7m">
+            <objects>
+                <viewController id="SEC-I4-dhy" customClass="ViewController" customModule="UIProgressView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Czh-KM-0Qc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhs-6s-LhC">
+                                <rect key="frame" x="30" y="45" width="315" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="btnStart_Clicked:" destination="SEC-I4-dhy" eventType="touchUpInside" id="9nB-hl-sGJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1L-ce-z0b">
+                                <rect key="frame" x="30" y="100" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zEH-NC-3hG">
+                                <rect key="frame" x="30" y="146" width="315" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XIq-0B-qnC" firstAttribute="trailing" secondItem="Lhs-6s-LhC" secondAttribute="trailing" constant="30" id="1as-Xj-HYC"/>
+                            <constraint firstItem="o1L-ce-z0b" firstAttribute="leading" secondItem="XIq-0B-qnC" secondAttribute="leading" constant="30" id="1df-uO-bYd"/>
+                            <constraint firstItem="Lhs-6s-LhC" firstAttribute="leading" secondItem="XIq-0B-qnC" secondAttribute="leading" constant="30" id="5Eh-Mk-ufx"/>
+                            <constraint firstAttribute="trailing" secondItem="zEH-NC-3hG" secondAttribute="trailing" constant="30" id="GvX-ef-0v3"/>
+                            <constraint firstItem="o1L-ce-z0b" firstAttribute="top" secondItem="Lhs-6s-LhC" secondAttribute="bottom" constant="25" id="far-va-SVA"/>
+                            <constraint firstItem="zEH-NC-3hG" firstAttribute="leading" secondItem="Czh-KM-0Qc" secondAttribute="leading" constant="30" id="ff9-XU-uda"/>
+                            <constraint firstItem="XIq-0B-qnC" firstAttribute="trailing" secondItem="o1L-ce-z0b" secondAttribute="trailing" constant="30" id="jje-3U-u31"/>
+                            <constraint firstItem="Lhs-6s-LhC" firstAttribute="top" secondItem="XIq-0B-qnC" secondAttribute="top" constant="25" id="kX8-06-khJ"/>
+                            <constraint firstItem="zEH-NC-3hG" firstAttribute="top" secondItem="o1L-ce-z0b" secondAttribute="bottom" constant="25" id="x5M-ia-zG6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XIq-0B-qnC"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblProgress" destination="o1L-ce-z0b" id="iXb-TX-MSU"/>
+                        <outlet property="progressView" destination="zEH-NC-3hG" id="L26-ZL-7Jn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jC-ZE-jmZ" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
